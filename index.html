@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>FMOD Player</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #222; color: #eee; }
+    button { padding: 10px; margin: 5px; cursor: pointer; }
+    button:hover { background: #555; }
+    button:active { background: #4caf50; }
+    .controls { margin: 20px 0; background: #333; padding: 15px; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <h1>FMOD Player</h1>
+  <div id="status">Initializing...</div>
+
+  <div class="controls">
+    <input type="file" id="fileInput" accept="audio/*" disabled>
+    <br><br>
+    
+    <button id="btnPlay">Play / Pause</button>
+    <button id="btnDSP">Pitch Shift On / Off</button>
+    <span id="DSPDisp">Off</span>
+    <br><br>
+
+    <div>
+        <span>Seek: </span>
+        <button id="btnRw30">&laquo; -30s</button>
+        <button id="btnRw">&laquo; -5s</button>
+        <button id="btnFw">+5s &raquo;</button>
+        <button id="btnFw30">+30s &raquo;</button>
+    </div>
+    <br>
+
+    <div>
+        <span>Tempo: </span>
+        <button id="btnSlowMax">--</button>
+        <button id="btnSlow">-</button>
+        <span id="tempoDisp">1.00x</span>
+        <button id="btnFast">+</button>
+        <button id="btnFastMax">++</button>
+        <button id="btnResetTempo">Reset</button>
+    </div>
+
+  </div>
+
+  <script src="src/fmodstudioL.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>
